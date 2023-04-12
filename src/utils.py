@@ -14,7 +14,9 @@ def load_dataset() -> (pd.DataFrame, pd.DataFrame):
 def split_dataset(X: pd.DataFrame, y: pd.DataFrame, test_size: float = 0.2) \
         -> (pd.DataFrame, pd.DataFrame, pd.Series, pd.Series):
     train_X, test_X, train_y, test_y = train_test_split(X, y, test_size=test_size)
-    return train_X, test_X, np.ravel(train_y), np.ravel(test_y)
+
+    # we want the labels to start from 0
+    return train_X, test_X, np.ravel(train_y - 1) , np.ravel(test_y - 1)
 
 
 def accuracy(y: pd.Series, predicted_y: pd.Series) -> float:
