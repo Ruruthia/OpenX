@@ -59,7 +59,7 @@ def load_models() -> Dict[str, Union[SimpleHeuristic, NeuralNet, ScikitModel]]:
     for model in ["knn", "random_forest"]:
         with open(f"models/{model}.pkl", "rb") as f:
             models[model] = pickle.load(f)
-    with open("/home/maria/Documents/OpenX/configs/neural_net.yaml") as f:
+    with open("configs/neural_net.yaml") as f:
         config = yaml.safe_load(f)
     models["simple_heuristic"] = SimpleHeuristic()
     nn = NeuralNet(**config, max_epochs=15)
