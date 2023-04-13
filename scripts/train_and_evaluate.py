@@ -42,12 +42,14 @@ def main() -> None:
     elif model_type == "neural_net":
         with open("configs/neural_net.yaml") as f:
             config = yaml.safe_load(f)
-        model = NeuralNet(**config, max_epochs=MAX_EPOCHS)
+        model = NeuralNet()
         history = model.fit(
             train_X=train_X,
             train_y=train_y,
             test_X=test_X,
             test_y=test_y,
+            **config,
+            max_epochs=MAX_EPOCHS,
             path="models/neural_net.ckpt",
         )
         plot_training(history)

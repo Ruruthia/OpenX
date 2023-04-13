@@ -62,10 +62,8 @@ def load_models() -> Dict[str, Union[SimpleHeuristic, NeuralNet, ScikitModel]]:
     for model in ["knn", "random_forest"]:
         with open(f"models/{model}.pkl", "rb") as f:
             models[model] = pickle.load(f)
-    with open("configs/neural_net.yaml") as f:
-        config = yaml.safe_load(f)
     models["simple_heuristic"] = SimpleHeuristic()
-    nn = NeuralNet(**config, max_epochs=15)
+    nn = NeuralNet()
     nn.load_from_checkpoint("models/neural_net.ckpt")
-    models["neural_network"] = nn
+    models["neural_net"] = nn
     return models

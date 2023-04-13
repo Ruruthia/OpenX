@@ -17,7 +17,7 @@ def predict():
     if model is None:
         return jsonify(
             {
-                "error": "model_type should be one of: simple_heuristic, knn, random_forest, neural_network"
+                "error": "model_type should be one of: simple_heuristic, knn, random_forest, neural_net"
             }
         )
     prediction = model.predict(np.array(point).reshape(1, -1)).item()

@@ -13,19 +13,22 @@ space = {
 
 
 def objective(params):
-    model = NeuralNet(
+    model = NeuralNet()
+    model.fit(
+        train_X=train_X,
+        train_y=train_y,
+        test_X=test_X,
+        test_y=test_y,
         batch_size=params["batch_size"],
         learning_rate=params["learning_rate"],
         max_epochs=MAX_EPOCHS,
     )
-    model.fit(train_X=train_X, train_y=train_y, test_X=test_X, test_y=test_y)
     predicted_y = model.predict(test_X)
     accuracy = calculate_accuracy(y=test_y, predicted_y=predicted_y)
     return {"loss": -accuracy, "status": STATUS_OK}
 
 
 def main():
-
     trials = Trials()
     best = fmin(
         objective, space, algo=tpe.suggest, trials=trials, verbose=True, max_evals=1
