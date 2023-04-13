@@ -1,9 +1,8 @@
 from hyperopt import fmin, tpe, hp, STATUS_OK, Trials
 
 from src.models.neural_net import NeuralNet
-from src.utils import calculate_accuracy, load_dataset, split_dataset
+from src.utils import calculate_accuracy, load_dataset, split_dataset, MAX_EPOCHS
 
-MAX_EPOCHS = 15
 X, y = load_dataset()
 train_X, test_X, train_y, test_y = split_dataset(X, y)
 
