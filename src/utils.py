@@ -20,4 +20,4 @@ def split_dataset(X: pd.DataFrame, y: pd.DataFrame, test_size: float = 0.2) \
 
 
 def calculate_accuracy(y: pd.Series, predicted_y: pd.Series) -> float:
-    return np.mean(y == predicted_y)[0]
+    return np.mean(y == predicted_y)
