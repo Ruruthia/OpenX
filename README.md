@@ -9,7 +9,8 @@ Python project to compare performance of simple heuristic, two simple ML models 
 Assigns one of 4 classes (out of 7) based on location features.
 
 Model accuracy: 0.535
-![Confusion matrix](https://github.com/Ruruthia/OpenX/blob/master/images/simple_heuristic_confusion_matrix.png?raw=true)
+
+[Confusion matrix](https://github.com/Ruruthia/OpenX/blob/master/images/simple_heuristic_confusion_matrix.png?raw=true)
 
 As expected, does not perform very well.
 
@@ -17,14 +18,13 @@ As expected, does not perform very well.
 
 Model accuracy: 0.941
 
-![Confusion matrix](https://github.com/Ruruthia/OpenX/blob/master/images/random_forest_confusion_matrix.png?raw=true)
-
+[Confusion matrix](https://github.com/Ruruthia/OpenX/blob/master/images/random_forest_confusion_matrix.png?raw=true)
 
 ### KNN
 
 Model accuracy: 0.95
 
-![Confusion matrix](https://github.com/Ruruthia/OpenX/blob/master/images/knn_confusion_matrix.png?raw=true)
+[Confusion matrix](https://github.com/Ruruthia/OpenX/blob/master/images/knn_confusion_matrix.png?raw=true)
 
 ### NN
 
@@ -33,9 +33,11 @@ In current state, it performs worse than KNNs and Random Forest.
 
 Model accuracy: 0.910
 
-![Confusion matrix](https://github.com/Ruruthia/OpenX/blob/master/images/neural_net_confusion_matrix.png?raw=true)
-![Accuracy during training](https://github.com/Ruruthia/OpenX/blob/master/images/neural_net_accuracy.png?raw=true)
-![Loss during training](https://github.com/Ruruthia/OpenX/blob/master/images/neural_net_loss.png?raw=true)
+[Confusion matrix](https://github.com/Ruruthia/OpenX/blob/master/images/neural_net_confusion_matrix.png?raw=true)
+
+[Accuracy during training](https://github.com/Ruruthia/OpenX/blob/master/images/neural_net_accuracy.png?raw=true)
+
+[Loss during training](https://github.com/Ruruthia/OpenX/blob/master/images/neural_net_loss.png?raw=true)
 
 ## How to run the code
 
