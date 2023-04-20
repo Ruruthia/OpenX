@@ -1,4 +1,6 @@
 .idea
 data/
-models/
+models/*.pkl
+models/*.cpkt
 src/__pycache__
+src/models/__pycache__
